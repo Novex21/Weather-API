@@ -91,9 +91,12 @@
         }
 
         searchBtn.addEventListener('click', () => { 
+            document.querySelector(".error").style.display = "none";
             checkWeather(searchCity.value);
+
         }) 
         searchCity.addEventListener('keydown', (event) => {
+            document.querySelector(".error").style.display = "none";
             if(event.key == 'Enter') checkWeather(searchCity.value);
         })
     </script>
